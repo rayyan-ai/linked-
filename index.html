@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>WEBSITE</title>
+    <style>
+        *{
+    padding: 0;
+    margin: 0;
+}
+.linkedin{
+    color: rgb(0, 225, 255);
+}
+.navbar{
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    position: sticky;
+    top: 0px;
+    z-index: 999;
+
+}
+
+
+.navlist{
+    display: flex;
+    list-style: none;
+
+}
+.navlinks{
+   display: flex;
+   list-style: none;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0077b5;
+    padding: 10px 20px;
+}
+
+
+.navbar-left .profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+.navbar-center {
+    
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.search-input {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 290px;
+    font-size: 16px;
+}
+
+.search-button {
+    
+    padding: 8px 5px;
+    background-color: #0077b5;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 350px;
+    font-size: 16px;
+}
+
+.search-button:hover {
+    background-color: #005f8a;
+    
+}
+
+/* Right Section (Links and Logo) */
+.navbar-right {
+    
+    display: flex;
+    align-items: center;
+    
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    margin-left: 20px;
+    padding: 8px;
+    
+}
+
+.nav-link:hover {
+    background-color: #005f8a;
+    border-radius: 5px;
+    
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    
+    margin-left: 20px;
+    object-fit: contain;
+}
+
+
+ .leftsection{
+    /* background-color: purple; */
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS26KOs7vNGmgJorWkkiEL1gCUNlwDmruY4mEEUvAJYnbd8WE_5aNhHLkdDeB8AGzb_FTw&usqp=CAU);
+    background-repeat: no-repeat;
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 220px;
+    height: 450px;
+    position: fixed;
+    top: 20%;
+    left: 5%;
+} 
+.sidebar-profile-box{
+             background: white;
+}
+.sidebar-profile-info{
+    padding: 0 25px;
+}
+.sidebar-profile-info img{
+    width: 90px;
+    border-radius: 50%;
+    background: white;
+    padding: 4px;
+    margin-top: -45px;
+}
+
+.profile{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    display: block;
+    margin: auto;
+    margin-top: 50px;
+    border: 1px solid;
+}
+
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.103);
+    border-radius: 8px;
+ 
+    padding: 20px;
+  }
+  
+ 
+  .create-post {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+  }
+  
+  .create-post-header {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+  }
+  
+  .profile-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+
+
+
+
+
+  
+  
+  .textarea {
+    width: 100%;
+    height: 50px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 16px;
+    resize: none;
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  
+  .textarea:focus {
+    border-color: #0073b1;
+    outline: none;
+  }
+  
+  .create-post-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+  }
+  
+  .footer-btn {
+    background: none;
+    border: none;
+    color: #0073b1;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+  }
+  
+  .footer-btn:hover {
+    text-decoration: underline;
+  }
+  
+  .post-btn {
+    background-color: #0073b1;
+    color: white;
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .post-btn:hover {
+    background-color: #005c8f;
+  }
+  
+  /* Feed Section (Main Content Area) */
+  .feed {
+    margin-top: 20px;
+  }
+  
+  /* Post Box Styling */
+  .post {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .post-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .post-user-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .post-username {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .post-time {
+    font-size: 12px;
+    color: #888;
+  }
+  
+  .post-content {
+    font-size: 16px;
+    color: #333;
+    margin-top: 10px;
+    line-height: 1.5;
+  }
+  
+  .post-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+  
+  .action-btn {
+    background: none;
+    border: none;
+    color: #0073b1;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .action-btn:hover {
+    text-decoration: underline;
+  }
+  
+  /* Hover effects */
+  .post:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+
+
+.rightsection{
+    /* background-color: purple; */
+    background-image: url(https://static.vecteezy.com/system/resources/thumbnails/042/660/319/small_2x/ai-generated-pic-city-park-bench-offers-a-peaceful-oasis-amidst-urban-hustle-photo.jpg) ;
+    background-repeat: no-repeat;
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 220px;
+    height: 450px;
+    position: fixed;
+    top: 20%;
+    right: 3%;
+} 
+.sidebar-profile-box{
+    background: white;
+}
+.sidebar-profile-info{
+padding: 0 25px;
+}
+.sidebar-profile-info img{
+width: 90px;
+border-radius: 50%;
+background: white;
+padding: 4px;
+margin-top: -45px;
+}
+
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+       
+        <div class="navbar-left">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAllBMVEUMZMX///8AYcQAWcFDf8nL3PIAWrzQ3vMAYcI0eclZjtAucslAgsz6/v3x9/sgbclOhM8AX8QAYsAAX70AV70AWMLm7vgAXb4sdsw5fsoRbsVmltK6z+iUt+AMZcGDrN3c6fNvnddiltWqwuPA0+r0+vyOrt+lweR9pduuyueUst9Lh81pldd1mtYdbcunxOXO4u7Z4fGRyVlRAAAEKUlEQVR4nO3ce1faMBzG8SblEpSCiUUuQrkMhsCc+v7f3Ko4KjW/yLY0WXOez9mf4Ml3vSW1NYoAAAAAAAAAAAAAAAAAAAAAAAAAAADgYiriIsqU72FURcapGnXHk5aMue+xVCCT6n56x960Z2OpMt8jsozz+Xve0Xqc+h6SXbKzYOeSfex7UBap+J591lThHI3awPxw5KGcVFUj0RayaRrI6UaUj8GTpfA9NivknApkvTC2YdwjC9lc+h6dBWpFB7JFCIXx1FDIRr6HZ0Fq2EkZewjgXNMnLhVH34a+x/fPeMdYOK3/gchvTIFsXf/ZKR+bC+u/DcW1cS/d1f84jFobU+H3ANYXadNU2PU9PAvkd0Ngz/forMgMhU/1P5Xm4h0ZmHQCOAzz68WEPNdsg9iE+ZH4QATeBTApPYqf9PvoKIh99E2qOxQ3jVvf47JHDT5fMl5GAQW+3tNvnF/4N3shwrhJc8Ljw/Q0Q13MJ4GcRc8IORjP99vZfpWlQe2gH3EZx7Gs/4IJAADqQ3DJX/+FM38vqHyKlA5Hhx+Pj49X43468P34CheEiz9Z+pTMlrvFaQ6YbNrblRpKf6vNbHRNKX2yT/kwSVd5XluzGGs//Ew9NfIGS/RYs3X2yUGzp7dpnMYu+zPql1mbp46f+XxeSCkVxrpt8+bmWJgJOTPeYP7m5QkWi4Wye0d94t3m3sNmtFao5OyLvle7zPnRaKlQCb6+IDBfXvddJ1oq5BH5WE7JXd/xwWilUKnJpYGM9a7dPk5mpfCWP18cmO+okdOtaKVwYHxm5ZP1wOWNPBuFneUfBTK2dHkzyEbhwfirco3NxOF+aqPw8rPMbzuHV34bhX+h4e6q6KnQ4ZM6ngrZyNlG9FXo7hfMvgp7zt7o8FXIDq52U2+FznbTKgovmgAsalq4mB0mQqjJYfvler98o6sWhevuYPh2C5jz4WD1ReMPR4soi4W91dmtXy7MK469o7mpvcLn8nRaSWPi9PzH/++FCXvW3LuXpoXxi6MllK1tqHtGLBMd0zccLYNtFR60W8T0wkqv7yTQVuGTfpfLuvRXkms3sxo7hQlx/yy7NayOO3Uq3MXExY148PFY6OZyYafwihqsXNJfGteoMCGXQoYfzxo1KmxSO2kkJvTLcXUq3BreraFnp3UqNLwT3aJPpnUqPNBjTV+CKDScFVv0t+pUaLiytegXq1BoCQoLKNRDYfVQWEChHgqrh8ICCvVQWD0UFlCoh8LqobCAQj0UVg+FBRTqobB6KCygUA+F1UNhAYV6KKweCgso1ENh9VBYQKEeCquHwkKAhe1SIf2UoaFwSP+/dB29FtTvUsbnH+Q3VxTDmxOq+zffskqJiOtFpZda+OV/M6uQKepLof0NWAAAAAAAAAAAAAAAAAAAAAAAAAAAgAr8Aj5RWY0PDbn2AAAAAElFTkSuQmCC" alt="LinkedIn Profile" class="profile-pic">
+        </div>
+
+        
+        <div class="navbar-center">
+            <input type="text" class="search-input" placeholder="Search...">
+            <button class="search-button"></button>
+        </div>
+
+        <!-- Right side: Home, Contact, and Logo -->
+        <div class="navbar-right">
+            <a href="#" class="nav-link">Home</a>
+            <a href="#" class="nav-link">Contact</a>
+            <a href="#" class="nav-link">Messages</a>
+            <a href="#" class="nav-link">Sign Out</a>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0828EhnzDaqG53IeMqRBFrNXV8_MT44bZrA&s" alt="Logo" class="logo">
+        </div>
+    </nav>
+
+    <div class="leftsection">
+        <div class="left-sidebar">
+            <div class="sidebar-profile-box">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTx6iNTwTHNgEBu1dBbdajHKj_MmxK_qK23sq5-ZlWw3CvR6EZacAnkcShQBHKsy-IIFcI&usqp=CAU" width="100%" height="130px">
+                <div class="sidebar-profile-info">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRER_E2yoSRwdrfmtu-ZzAMGtMzsRTIpFFr_47Q4XKlEDGwjjpFC5gmJxV-qyZqWozAZuA&usqp=CAU" height="90px">
+                    <h2>WEBSITE DEVELOPER</h2>
+                    <ul>
+                        <li>App DEVELOPER</li>
+                        <li>A website is one or more web pages and related content that is identified by a common domain name and published on at least one web server.</li>
+                        <li>Video: Becoming a Web Developer</li>
+                        <li>Technical skills</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    
+
+    <div class="container">
+        <!-- Header Section - Post Creation Box -->
+        <div class="create-post">
+          <div class="create-post-header">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAllBMVEUMZMX///8AYcQAWcFDf8nL3PIAWrzQ3vMAYcI0eclZjtAucslAgsz6/v3x9/sgbclOhM8AX8QAYsAAX70AV70AWMLm7vgAXb4sdsw5fsoRbsVmltK6z+iUt+AMZcGDrN3c6fNvnddiltWqwuPA0+r0+vyOrt+lweR9pduuyueUst9Lh81pldd1mtYdbcunxOXO4u7Z4fGRyVlRAAAEKUlEQVR4nO3ce1faMBzG8SblEpSCiUUuQrkMhsCc+v7f3Ko4KjW/yLY0WXOez9mf4Ml3vSW1NYoAAAAAAAAAAAAAAAAAAAAAAAAAAADgYiriIsqU72FURcapGnXHk5aMue+xVCCT6n56x960Z2OpMt8jsozz+Xve0Xqc+h6SXbKzYOeSfex7UBap+J591lThHI3awPxw5KGcVFUj0RayaRrI6UaUj8GTpfA9NivknApkvTC2YdwjC9lc+h6dBWpFB7JFCIXx1FDIRr6HZ0Fq2EkZewjgXNMnLhVH34a+x/fPeMdYOK3/gchvTIFsXf/ZKR+bC+u/DcW1cS/d1f84jFobU+H3ANYXadNU2PU9PAvkd0Ngz/forMgMhU/1P5Xm4h0ZmHQCOAzz68WEPNdsg9iE+ZH4QATeBTApPYqf9PvoKIh99E2qOxQ3jVvf47JHDT5fMl5GAQW+3tNvnF/4N3shwrhJc8Ljw/Q0Q13MJ4GcRc8IORjP99vZfpWlQe2gH3EZx7Gs/4IJAADqQ3DJX/+FM38vqHyKlA5Hhx+Pj49X43468P34CheEiz9Z+pTMlrvFaQ6YbNrblRpKf6vNbHRNKX2yT/kwSVd5XluzGGs//Ew9NfIGS/RYs3X2yUGzp7dpnMYu+zPql1mbp46f+XxeSCkVxrpt8+bmWJgJOTPeYP7m5QkWi4Wye0d94t3m3sNmtFao5OyLvle7zPnRaKlQCb6+IDBfXvddJ1oq5BH5WE7JXd/xwWilUKnJpYGM9a7dPk5mpfCWP18cmO+okdOtaKVwYHxm5ZP1wOWNPBuFneUfBTK2dHkzyEbhwfirco3NxOF+aqPw8rPMbzuHV34bhX+h4e6q6KnQ4ZM6ngrZyNlG9FXo7hfMvgp7zt7o8FXIDq52U2+FznbTKgovmgAsalq4mB0mQqjJYfvler98o6sWhevuYPh2C5jz4WD1ReMPR4soi4W91dmtXy7MK469o7mpvcLn8nRaSWPi9PzH/++FCXvW3LuXpoXxi6MllK1tqHtGLBMd0zccLYNtFR60W8T0wkqv7yTQVuGTfpfLuvRXkms3sxo7hQlx/yy7NayOO3Uq3MXExY148PFY6OZyYafwihqsXNJfGteoMCGXQoYfzxo1KmxSO2kkJvTLcXUq3BreraFnp3UqNLwT3aJPpnUqPNBjTV+CKDScFVv0t+pUaLiytegXq1BoCQoLKNRDYfVQWEChHgqrh8ICCvVQWD0UFlCoh8LqobCAQj0UVg+FBRTqobB6KCygUA+F1UNhAYV6KKweCgso1ENh9VBYQKEeCquHwkKAhe1SIf2UoaFwSP+/dB29FtTvUsbnH+Q3VxTDmxOq+zffskqJiOtFpZda+OV/M6uQKepLof0NWAAAAAAAAAAAAAAAAAAAAAAAAAAAgAr8Aj5RWY0PDbn2AAAAAElFTkSuQmCC" alt="User" class="profile-img">
+            <textarea placeholder="What do you want to talk about?" class="textarea"></textarea>
+          </div>
+          <div class="create-post-footer">
+            <button class="footer-btn">Add Photo/Video</button>
+            <button class="footer-btn">Add Document</button>
+            <button class="footer-btn">Feeling/Activity</button>
+            <button class="post-btn">Post</button>
+          </div>
+        </div>
+    
+        <!-- Feed Section - List of Posts -->
+        <div class="feed">
+          <!-- Post Box 1 -->
+          <div class="post">
+            <div class="post-header">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaqic24uTES00V1c0CY-FSoSbhM18Nj7go9A&s" alt="User" class="post-avatar">
+              <div class="post-user-info">
+                <h4 class="post-username">Rayyan Akhter</h4>
+                <p class="post-time">2 hours ago</p>
+              </div>
+            </div>
+            <p class="post-content">Had a great day working on an exciting new project! #SoftwareEngineering #Coding Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam, tempore.</p>
+            <div class="post-actions">
+              <button class="action-btn">Like</button>
+              <button class="action-btn">Comment</button>
+              <button class="action-btn">Share</button>
+              <button class="action-btn">Follow</button>
+            </div>
+          </div>
+    
+          <!-- Post Box 2 -->
+          <div class="post">
+            <div class="post-header">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7VAF1JeDydcAej9f3rUMw_HmdR8amtY_bOP9FORknY8ClD62NWHom8UmFTbV3woKhhZs&usqp=CAU" alt="User" class="post-avatar">
+              <div class="post-user-info">
+                <h4 class="post-username">Nissar Portfolio</h4>
+                <p class="post-time">15 day ago</p>
+              </div>
+            </div>
+            <p class="post-content">Exploring new technologies and frameworks! Excited for the future. #TechTrends #Learning Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, inventore!</p>
+            <div class="post-actions">
+              <button class="action-btn">Like</button>
+              <button class="action-btn">Comment</button>
+              <button class="action-btn">Share</button>
+              <button class="action-btn">Follow</button>
+            </div>
+          </div>
+    
+          <!-- Post Box 3 -->
+          <div class="post">
+            <div class="post-header">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGGIaGnrOpeJIH4u_2gJ0JBCl1U3kMurFrX3Zf3_QFeeKo2V6VOtL1ooKtJw-RCSMDYbA&usqp=CAU" alt="User" class="post-avatar">
+              <div class="post-user-info">
+                <h4 class="post-username">Asim Khatak</h4>
+                <p class="post-time">3 days ago</p>
+              </div>
+            </div>
+            <p class="post-content">Had an insightful meeting with my team about the future of AI in healthcare. #AI #HealthcareInnovation Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <div class="post-actions">
+              <button class="action-btn">Like</button>
+              <button class="action-btn">Comment</button>
+              <button class="action-btn">Share</button>
+              <button class="action-btn">Follow</button>
+            </div>
+          </div>
+    
+          <!-- Post Box 4 -->
+          <div class="post">
+            <div class="post-header">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLsQM2TMQmLbfWyqQJTjkkYjdRdOtoON5ODg&s" alt="User" class="post-avatar">
+              <div class="post-user-info">
+                <h4 class="post-username">AHMED SHAH</h4>
+                <p class="post-time">5 days ago</p>
+              </div>
+            </div>
+            <p class="post-content">Excited to attend the Web Development conference next week! #WebDev #Conference2024 Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, nisi.</p>
+            <div class="post-actions">
+              <button class="action-btn">Like</button>
+              <button class="action-btn">Comment</button>
+              <button class="action-btn">Share</button>
+              <button class="action-btn">Folow</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rightsection">
+        <div class="right-sidebar">
+            <div class="sidebar-profile-box">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUyt1aFWGq_UU_HunA2eOKmgnBTh5IPvBIGw&s" width="100%" height="130px">
+                <div class="sidebar-profile-info">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTG5CPz89vwuDB4H5EsXhkpKz0_koS-0HK0Yg&s" height="90px">
+                    <h2>Web Skills</h2>
+                    <ul>
+                        <li>WEBSITE DEVELOPER</li>
+                        <li>A website is one or more web pages and related content that is identified by a common domain name and published on at least one web server.</li>
+                        <li>Video: Becoming a Web Developer</li>
+                        <li>Technical skills</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
